@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at center, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 50%, var(--tw-gradient-to) 100%);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 15px theme('colors.cyan.500' / 10%),
+                0 0 30px theme('colors.cyan.500' / 5%);
+  }
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes pulse-slower {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes pulse-fast {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.3; filter: blur(2px); }
+  50% { opacity: 0.7; filter: blur(1px); }
+}
+
+@keyframes shooting-star {
+  0% { transform: translateX(-100%) translateY(-100%); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateX(200%) translateY(200%); opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Apply animations */
+.animate-pulse-slow {
+  animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Stars */
+.stars-small, .stars-medium, .stars-large {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.stars-small {
+  box-shadow: 0 0 1px theme('colors.white'),
+              1px 1px 1px theme('colors.white'),
+              -1px -1px 1px theme('colors.white');
+  animation: glow 3s ease-in-out infinite;
+}
+
+.stars-medium {
+  box-shadow: 0 0 2px theme('colors.cyan.400'),
+              2px 2px 2px theme('colors.cyan.400'),
+              -2px -2px 2px theme('colors.cyan.400');
+  animation: glow 5s ease-in-out infinite;
+}
+
+.stars-large {
+  box-shadow: 0 0 3px theme('colors.purple.400'),
+              3px 3px 3px theme('colors.purple.400'),
+              -3px -3px 3px theme('colors.purple.400');
+  animation: glow 7s ease-in-out infinite;
+}
+
+/* Particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: theme('colors.cyan.400');
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+  animation-delay: var(--delay);
+  left: var(--position);
+  opacity: 0.5;
+}
+
+/* Glow Lines */
+.glow-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.glow-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    theme('colors.cyan.400' / 20%) 25%,
+    theme('colors.cyan.400' / 40%) 50%,
+    theme('colors.cyan.400' / 20%) 75%,
+    transparent 100%
+  );
+  animation: shooting-star 8s linear infinite;
+  animation-delay: var(--delay);
+  top: var(--position);
+  transform: rotate(-35deg);
+}
