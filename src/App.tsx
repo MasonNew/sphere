@@ -111,20 +111,20 @@ function App() {
       </Suspense>
       
       {/* Enhanced Social Links and Contract Address */}
-      <div className="fixed bottom-8 left-0 w-full p-8 z-10">
-        <div className="max-w-3xl mx-auto bg-black/40 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30 shadow-glow">
-          <div className="flex items-center justify-between">
+      <div className="fixed bottom-6 left-0 w-full px-6 z-10">
+        <div className="max-w-2xl mx-auto bg-black/40 backdrop-blur-xl rounded-xl p-4 border border-cyan-500/30 shadow-glow">
+          <div className="flex items-center justify-between gap-4">
             {/* Social Links with enhanced styling */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center gap-3">
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-lg group-hover:bg-cyan-400/30 transition-all duration-300" />
-                <div className="relative bg-black/50 p-3 rounded-full border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
-                  <Twitter size={24} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-md group-hover:bg-cyan-400/30 transition-all duration-300" />
+                <div className="relative bg-black/50 p-2 rounded-full border border-cyan-500/30 backdrop-blur-sm group-hover:border-cyan-400/50 transition-all duration-300">
+                  <Twitter size={20} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 </div>
               </a>
               <a
@@ -133,17 +133,17 @@ function App() {
                 rel="noopener noreferrer"
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-lg group-hover:bg-cyan-400/30 transition-all duration-300" />
-                <div className="relative bg-black/50 p-3 rounded-full border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
-                  <ExternalLink size={24} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-md group-hover:bg-cyan-400/30 transition-all duration-300" />
+                <div className="relative bg-black/50 p-2 rounded-full border border-cyan-500/30 backdrop-blur-sm group-hover:border-cyan-400/50 transition-all duration-300">
+                  <ExternalLink size={20} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 </div>
               </a>
             </div>
             {/* Contract Address with enhanced styling */}
             <div className="flex items-center">
-              <span className="text-cyan-400 mr-3 text-sm font-medium">Contract Address:</span>
-              <div className="bg-black/50 px-4 py-2 rounded-lg border border-cyan-500/30 backdrop-blur-sm">
-                <span className="text-cyan-300 font-mono text-sm">{contractAddress}</span>
+              <span className="text-cyan-400/90 mr-2.5 text-xs font-medium uppercase tracking-wide">Contract:</span>
+              <div className="bg-black/50 px-3 py-1.5 rounded-lg border border-cyan-500/30 backdrop-blur-sm">
+                <span className="text-cyan-300/90 font-mono text-xs">{contractAddress}</span>
               </div>
             </div>
           </div>
