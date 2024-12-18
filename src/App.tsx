@@ -6,7 +6,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Twitter, ExternalLink } from 'lucide-react';
 
 function App() {
-  const contractAddress = "Launching Soon"; // Replace with actual contract address
+  const contractAddress = "5F2wtzNAYDwnx1j3BeUfzT4ZogaMiYEZfmfknYNtkn9Y"; // Replace with actual contract address
 
   // Memoize Canvas settings
   const canvasSettings = useMemo(() => ({
@@ -128,7 +128,7 @@ function App() {
                 </div>
               </a>
               <a
-                href="https://pump.fun/board"
+                href="https://pump.fun/coin/5F2wtzNAYDwnx1j3BeUfzT4ZogaMiYEZfmfknYNtkn9Y"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative"
