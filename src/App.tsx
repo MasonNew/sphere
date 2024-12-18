@@ -117,7 +117,7 @@ function App() {
             {/* Social Links with enhanced styling */}
             <div className="flex items-center gap-3">
               <a
-                href="https://twitter.com"
+                href="https://x.com/ThePumpSphere"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative"
@@ -128,7 +128,7 @@ function App() {
                 </div>
               </a>
               <a
-                href="https://telegram.org"
+                href="https://google.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative"
